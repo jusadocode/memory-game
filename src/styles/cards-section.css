@@ -1,0 +1,34 @@
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 15rem;
+    border-radius: 3px;
+    transition: background-color 1s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    background-color: gray;
+    cursor: pointer;
+    border: 1px solid #41e600;
+}
+
+.card:hover img {
+    scale: 1.1;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 1rem;
+    width: 50%;
+}
+
+
