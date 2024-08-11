@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "../styles/cards-section.css";
 
 function FailSection({
@@ -7,10 +8,16 @@ function FailSection({
   handleRestart,
   handleGoBack,
 }) {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <h1>You Lost!</h1>
+      <div>
+        <h1 className={animate ? "loss-text" : ""}>You Lost!</h1>
         <p>Scored: {score}</p>
         <p>
           {highestScore < score
@@ -18,8 +25,10 @@ function FailSection({
             : `Highest score: ${highestScore}`}
         </p>
         <img src={deathCard.img} alt="" />
-        <button onClick={handleRestart}>Try again</button>
-        <button onClick={handleGoBack}>Back to menu</button>
+        <div className="button-holder">
+          <button onClick={handleRestart}>Try again</button>
+          <button onClick={handleGoBack}>Back to menu</button>
+        </div>
       </div>
     </>
   );

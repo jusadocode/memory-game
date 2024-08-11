@@ -1,5 +1,22 @@
 .menu-container {
     display: flex;
     flex-direction: column;
-    
+    gap: 3rem;
+    animation: fadeIn 1s ease-out;
 }
+
+
+  /* Simple Button Hover */
+.simple-button:hover {
+    border-color: #1e90ff; /* Blue border color for Simple button */
+  }
+  
+  /* Normal Button Hover */
+  .normal-button:hover {
+    border-color: #32cd32; /* Green border color for Normal button */
+  }
+  
+  /* Complicated Button Hover */
+  .complicated-button:hover {
+    border-color: #ff6347; /* Tomato border color for Complicated button */
+  }

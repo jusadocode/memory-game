@@ -3,13 +3,23 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 
 .main-container {
   display: flex;
-  flex-direction: column;
   gap: 5rem;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
