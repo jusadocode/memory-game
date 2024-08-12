@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-
-import "./App.css";
+import shuffle from "./helperFunctions/math-utilities";
 import CardsSection from "./components/CardsSection";
 import ScoreSection from "./components/ScoreSection";
 import StartSection from "./components/StartSection";
@@ -10,7 +9,8 @@ import {
   fetchCardData,
   loadNeededInfo,
 } from "./helperFunctions/data-utilities";
-import shuffle from "./helperFunctions/math-utilities";
+
+import "./App.css";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -31,7 +31,6 @@ function App() {
 
   useEffect(() => {
     fetchCardData().then((response) => {
-      console.log(response);
       const structuredData = loadNeededInfo(response.data);
       setAllCards(structuredData);
       setDeathCard(structuredData[0]);

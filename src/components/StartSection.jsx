@@ -8,11 +8,10 @@ function StartSection({ handleStart }) {
       <h3>Choose difficulty</h3>
       <div className="button-holder">
         <Tilt
-          className="tilt-container"
-          tiltMaxAngleX={10} // Maximum tilt angle on the X-axis
-          tiltMaxAngleY={10} // Maximum tilt angle on the Y-axis
-          perspective={1000} // Distance from the viewer to the tilt container
-          scale={1.1} // Scale the content
+          tiltMaxAngleX={10}
+          tiltMaxAngleY={10}
+          perspective={1000}
+          scale={1.1}
         >
           <button className="simple-button" onClick={() => handleStart(4)}>
             Simple
@@ -20,7 +19,6 @@ function StartSection({ handleStart }) {
         </Tilt>
 
         <Tilt
-          className="tilt-container"
           tiltMaxAngleX={10}
           tiltMaxAngleY={10}
           perspective={1000}
@@ -32,7 +30,6 @@ function StartSection({ handleStart }) {
         </Tilt>
 
         <Tilt
-          className="tilt-container"
           tiltMaxAngleX={10}
           tiltMaxAngleY={10}
           perspective={1000}

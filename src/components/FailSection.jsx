@@ -8,16 +8,16 @@ function FailSection({
   handleRestart,
   handleGoBack,
 }) {
-  const [animate, setAnimate] = useState(false);
+  const [animateText, setAnimateText] = useState(false);
 
   useEffect(() => {
-    setAnimate(true);
+    setAnimateText(true);
   }, []);
 
   return (
     <>
       <div>
-        <h1 className={animate ? "loss-text" : ""}>You Lost!</h1>
+        <h1 className={animateText ? "loss-text" : ""}>You Lost!</h1>
         <p>Scored: {score}</p>
         <p>
           {highestScore < score
